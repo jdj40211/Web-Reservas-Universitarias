@@ -1,7 +1,8 @@
 # Web-Reservas-Universitarias
 Repositorio para P1
+
 HU:
--Inscribir Documento de identidad
+- Inscribir Documento de identidad
 - Solicitar turnos
 - Ver turnos
 - Cancelar turnos
