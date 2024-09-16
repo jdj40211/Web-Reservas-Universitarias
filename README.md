@@ -8,7 +8,7 @@ Este proyecto es una aplicación web para la reserva de citas. A continuación, 
 1. Clonar el repositorio:
 
    ```bash
-   git clone https://github.com/jdj40211/WebReservaCitas.git
+   git clone https://github.com/jdj40211/Web-Reservas-Universitarias.git
 
 2. Navegar a la carpeta del proyecto
    
