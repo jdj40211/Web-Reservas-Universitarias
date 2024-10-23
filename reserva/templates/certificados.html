@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 
-<body>
+<body style="display: flex; flex-direction: column; height: 100vh;">
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -31,10 +32,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">General Attention</a>
+                        <a class="nav-link" href="{% url 'home' %}">General Attention</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'certificados' %}">Certificates</a>
+                        <a class="nav-link active" aria-current="page" href="#">Certificates</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Others</a>
@@ -52,22 +53,58 @@
         </div>
     </nav>
 
+     <!-- Texto centrado en la página -->
+     <div class="text-center my-auto p-4 rounded" style="background-color: #201f1fad;">
+        <h1 class="display-4" style="color: rgb(255, 255, 255)">Bienvenido a certificados</h1>
+        <p class="lead" style="color: rgb(255, 255, 255);">Puedes solicitar los certificados entrando a EPIK/certificados
+            y acá abajo te dejamos el instructivo para que puedas descargarlo</p>
+    </div>
 
-    <!-- Calendly inline widget begin -->
-    <div class="calendly-inline-widget"
-        data-url="https://calendly.com/juandasierra111/agenda-aca-tu-asesoria?background_color=1a1a1a&text_color=ffffff"
-        style="min-width:320px;height:700px;"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <!-- Calendly inline widget end -->
-
+    <!-- columnas -->
+    <div class="row g-0 text-center justify-content-center" style="margin-top: auto;">
+        <div class="col-6 instructivo-text">
+            Instructivo de Certificados
+        </div>
+        <div class="col-6">
+            <a href="{% static 'INSTRUCTIVO_CERTIFICADOS.pdf' %}" class="btn btn-light" download>
+            Descargar PDF
+            </a>
+        </div>
+    </div>
 
 </body>
+
 <style>
     html, body {
         margin: 0;
         padding: 0;
         overflow-x: hidden;  /* Evitar el scroll horizontal */
     }
-    </style>
+    .row {
+        background-color: #201f1fad; /* Cambia el color según lo que necesites */
+        padding: 30px; /* Agrega un poco de espacio alrededor del contenido */
+        margin: 0 auto;
+        text-align: center;
+        border: rgb(0, 0, 0) 1px solid;
+        width: 100%; /* Asegúrate de que ocupe el ancho completo */
+    }
+    .col-6 {
+        font-size: 20px;
+        color: white;
+        border-right: 2px solid rgb(50, 50, 50); /* Borde derecho */ 
+    }
+    .col-6:last-child {
+        border-right: none; /* Elimina el borde derecho del último elemento */
+    }
+    .instructivo-text {
+        font-size: 20px; /* Ajusta el tamaño del texto si es necesario */
+        color: white; /* Color del texto */
+        text-shadow: 
+            -1px -1px 0 black,  
+             1px -1px 0 black,
+            -1px  1px 0 black,
+             1px  1px 0 black; /* Sombra alrededor del texto que simula un borde */
+    }
+</style>
 
 </html>

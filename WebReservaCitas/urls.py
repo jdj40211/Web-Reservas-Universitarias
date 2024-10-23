@@ -21,4 +21,5 @@ from reserva import views as reservaViews
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', reservaViews.home , name='home'),
+    path('certificados/', reservaViews.certificados , name='certificados'),
 ]
